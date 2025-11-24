@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="glMatrix-0.9.5.min.js"></script>
+    <script src="Shadow.js"></script>
+    <title>Assignment 4</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+      }
+      #container {
+        width: 100vw;
+        height: 100vh;
+      }
+      #pos {
+        height: 884px;
+        width: 800px;
+        display: flex;
+        margin: auto;
+        background-color: white;
+        border: 8px solid white;
+      }
+
+      #lightPosLabel,
+      #animateLabel {
+        font-size: x-large;
+        margin-right: 10px 0;
+      }
+
+      #lightPos {
+        width: 300px;
+      }
+
+      .slider-container {
+        display: flex;
+        align-items: start;
+        margin-top: 10px;
+      }
+
+      .slider-label {
+        margin-right: 10px;
+      }
+
+      .animation-controls {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+
+      .animation-label {
+        margin-right: 10px;
+        font-size: x-large;
+      }
+
+      #animateCheckbox {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body onload="webGLStart()">
+    <div id="pos">
+      <div id="container">
+        <canvas width="800" height="800" id="canvas"></canvas>
+
+        <div class="slider-container">
+          <label class="slider-label" id="lightPosLabel">
+            Control Light Position:
+          </label>
+          <input type="range" name="lightPos" id="lightPos" min="-4" max="4" />
+        </div>
+
+        <div class="animation-controls">
+          <label class="animation-label" id="animateLabel">Animate</label>
+          <input type="checkbox" id="animateCheckbox" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
